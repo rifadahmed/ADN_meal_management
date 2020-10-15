@@ -31,8 +31,8 @@
           <div class="col-lg-3 col-6">
             <div class="small-box bg-info">
               <div class="inner">
-                <h3>{{$totalAmount}}</h3>
-                <p>Total Reciveable</p>
+                <h3>22</h3>
+                <p>Total Meal Request</p>
               </div>
               <div class="icon">
                 <i class="nav-icon fas fa-money-check-alt"></i>
@@ -43,8 +43,8 @@
           <div class="col-lg-3 col-6">
             <div class="small-box bg-success">
               <div class="inner">
-                <h3>{{$totalGet}}<sup style="font-size: 20px"></sup></h3>
-                <p>Total Paid</p>
+                <h3>4<sup style="font-size: 20px"></sup></h3>
+                <p>Meal Cancelation Request </p>
               </div>
               <div class="icon">
                 <i class="fas fa-hand-holding-usd"></i>
@@ -57,8 +57,8 @@
           <div class="col-lg-3 col-6">
             <div class="small-box bg-warning">
               <div class="inner">
-                <h3>{{$total_shareholder}}<sup style="font-size: 20px"></sup></h3>
-                <p>Total Shareholder</p>
+                <h3>56,000<sup style="font-size: 20px"></sup></h3>
+                <p>Total Payable Amount </p>
               </div>
               <div class="icon">
                 <i class="fas fa-user-friends"></i>
@@ -67,10 +67,10 @@
             </div>
           </div>
 
-          <div class="col-lg-3 col-6">
+          {{--  <div class="col-lg-3 col-6">
             <div class="small-box bg-danger">
               <div class="inner">
-                <h3>{{$total_project}}<sup style="font-size: 20px"></sup></h3>
+                <h3>56<sup style="font-size: 20px"></sup></h3>
                 <p>Total Project</p>
               </div>
               <div class="icon">
@@ -78,7 +78,7 @@
               </div>
               <!-- <a href="#" class="small-box-footer">More info <i class="fas fa-arrow-circle-right"></i></a> -->
             </div>
-          </div>
+          </div>  --}}
           <!-- ./col -->
           <!-- <div class="col-lg-3 col-6">
 

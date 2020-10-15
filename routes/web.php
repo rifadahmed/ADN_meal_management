@@ -66,6 +66,6 @@ Route::get('/list', function () {
       });
 
         //Auth::routes();
-        Auth::routes(['register' => false]); //disable register route.['except' => 'logout']
+        Auth::routes(['register' => true]); //disable register route.['except' => 'logout']
 
         Route::get('/home', [App\Http\Controllers\HomeController::class, 'index'])->name('home');
