@@ -37,11 +37,6 @@ class MealrateController extends Controller
             $mealrate->effective_date =$request->effective_date;
             $mealrate->created_by = Auth::User()->name;
             $mealrate->save();
-
-
-
-
-            
             return redirect()->route('mealrate.index');
 
     }

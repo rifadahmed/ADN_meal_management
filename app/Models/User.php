@@ -45,4 +45,13 @@ class User extends Authenticatable
     public function total_paid(){
         return $this->hasMany('App\Models\Disburshment','shareholder_id');
     }
+
+    // public function isAdmin()
+    //     {
+    //     if ($this->name=='rifad') 
+    //     {
+    //         return true;
+    //     } 
+    //     return false;
+    //     }
 }

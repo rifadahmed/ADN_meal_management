@@ -16,8 +16,8 @@ class CreateSbuInformationsTable extends Migration
         Schema::create('sbu_informations', function (Blueprint $table) {
             $table->id();
             $table->string('company_name');
-            $table->string('created_by');
-            $table->string('modified_by');
+            $table->string('created_by')->nullable();
+            $table->string('modified_by')->nullable();
             $table->timestamps();
         });
     }
