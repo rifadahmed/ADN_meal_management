@@ -16,13 +16,22 @@ class CreateUsersTable extends Migration
         Schema::create('users', function (Blueprint $table) {
             $table->bigIncrements('id');
             $table->string('name');
-            $table->double('share');
-            $table->double('total_share');
             $table->string('email')->unique();
-            $table->timestamp('email_verified_at')->nullable();
+            $table->foreign('designation_id')->references('id')->on('designations')->onDelete('cascade');
+            $table->unsignedInteger('designation_id');
+            $table->foreign('unit_id')->references('id')->on('units')->onDelete('cascade');
+            $table->unsignedInteger('unit_id');
+            $table->foreign('sbu_id')->references('id')->on('sbu_informations')->onDelete('cascade');
+            $table->integer('sbu_id');
+            $table->foreign('location_id')->references('id')->on('office_location_informations')->ondDelete('cascade');
+            $table->integer('location_id');
+            $table->integer('is_avtive')->default(0);
             $table->string('password');
             $table->string('created_by')->nullable();
-            $table->string('updated_by')->nullable();
+            $table->string('modified_by')->nullable();
+
+            
+            $table->timestamp('email_verified_at')->nullable(); 
             $table->rememberToken();
             $table->timestamps();
         });

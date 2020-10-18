@@ -1,10 +1,13 @@
 <?php
 
+use App\Models\User;
 use Illuminate\Support\Facades\Route;
 use App\Http\Controllers\UserController;
 use App\Http\Controllers\ProjectController;
+use App\Http\Controllers\MealrateController;
 use App\Http\Controllers\DashboardController;
 use App\Http\Controllers\FinancialController;
+use App\Http\Controllers\DesignationController;
 use App\Http\Controllers\DisburshmentController;
 // use App\Http\Middleware\Auth;
 /*
@@ -17,11 +20,31 @@ use App\Http\Controllers\DisburshmentController;
 | contains the "web" middleware group. Now create something great!
 |
 */
+//Designation
+Route::get('/designation/index', [DesignationController::class, 'index'])->name('designation.index');
+Route::get('/designation/create', [DesignationController::class, 'create'])->name('designation.create');
+Route::post('/designation/store', [DesignationController::class, 'store'])->name('designation.store');
+Route::get('/designation/edit/{id}', [DesignationController::class, 'edit'])->name('designation.edit');
+Route::post('/designation/update/{id}', [DesignationController::class, 'update'])->name('designation.update');
+
+
+//Meal Rate
+Route::get('/mealrate/index', [MealrateController::class, 'index'])->name('mealrate.index');
+Route::get('/mealrate/create', [MealrateController::class, 'create'])->name('mealrate.create');
+Route::post('/mealrate/store', [MealrateController::class, 'store'])->name('mealrate.store');
+Route::get('/mealrate/edit/{id}', [MealrateController::class, 'edit'])->name('mealrate.edit');
+Route::post('/mealrate/update/{id}', [MealrateController::class, 'update'])->name('mealrate.update');
+
+
+
+
+
 
 
 Route::get('/list', function () {
     return view('user.index');
 });
+
 
 
 
@@ -65,6 +88,8 @@ Route::get('/list', function () {
 
       });
 
+
+      
         //Auth::routes();
         Auth::routes(['register' => true]); //disable register route.['except' => 'logout']
 

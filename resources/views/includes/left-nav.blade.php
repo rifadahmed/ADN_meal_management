@@ -63,7 +63,7 @@
              </ul>
          </li>--}}
 
-          <li class="nav-item has-treeview @if(Request::segment(1) == 'project' && Request::segment(2)=='index' ||Request::segment(1) == 'project' && Request::segment(2)=='create' ||Request::segment(1) == 'project' && Request::segment(2)=='edit' ) menu-open @endif bold ">
+          {{--  <li class="nav-item has-treeview @if(Request::segment(1) == 'project' && Request::segment(2)=='index' ||Request::segment(1) == 'project' && Request::segment(2)=='create' ||Request::segment(1) == 'project' && Request::segment(2)=='edit' ) menu-open @endif bold ">
             <a href="#" class="nav-link ">
               <i class="nav-icon fas fa-tasks"></i>
               <p>
@@ -72,12 +72,12 @@
               </p>
             </a>
             <ul class="nav nav-treeview">
-              {{--  <li class="nav-item">
+              <li class="nav-item">
                 <a href="{{route('project.index')}} " class="nav-link @if(Request::segment(1) == 'project' && Request::segment(2)=='index' ) active @endif bold">
                   <i class="far fa-circle nav-icon"></i>
                   <p>Project List</p>
                 </a>
-              </li>  --}}
+              </li>
               <li class="nav-item">
                 <a href=" {{route('project.create')}} " class="nav-link @if(Request::segment(1) == 'project' && Request::segment(2)=='create' ) active @endif bold">
                   <i class="far fa-circle nav-icon"></i>
@@ -85,31 +85,54 @@
                 </a>
               </li>
             </ul>
-          </li>
+          </li>  --}}
 
-        {{--  <li class="nav-item has-treeview @if(Request::segment(1) == 'user' && Request::segment(2)=='index' ||Request::segment(1) == 'user' && Request::segment(2)=='create' ||Request::segment(1) == 'user' && Request::segment(2)=='edit' ) menu-open @endif bold">
-          <a href="#" class="nav-link ">
-            <i class="nav-icon fas fa-users"></i>
-            <p>
-              Shareholder
-              <i class="right fas fa-angle-left"></i>
-            </p>
-          </a>
-          <ul class="nav nav-treeview">
-            <li class="nav-item">
-              <a href="{{route('user.index')}} " class="nav-link @if(Request::segment(1) == 'user' && Request::segment(2)=='index' ) active @endif bold">
-                <i class="far fa-circle nav-icon"></i>
-                <p>Shareholder List</p>
-              </a>
-            </li>
-            <li class="nav-item">
-              <a href=" {{route('user.create')}} " class="nav-link @if(Request::segment(1) == 'user' && Request::segment(2)=='create' ) active @endif bold">
-                <i class="far fa-circle nav-icon"></i>
-                <p>Add Shareholder</p>
-              </a>
-            </li>
-          </ul>
-        </li>  --}}
+          <li class="nav-item has-treeview @if(Request::segment(1) == 'desigantion' && Request::segment(2)=='index' ||Request::segment(1) == 'designation' && Request::segment(2)=='create' ||Request::segment(1) == 'designation' && Request::segment(2)=='edit' ) menu-open @endif bold ">
+            <a href="#" class="nav-link ">
+              <i class="nav-icon fas fa-tasks"></i>
+              <p>
+                Designation
+                <i class="right fas fa-angle-left"></i>
+              </p>
+            </a>
+            <ul class="nav nav-treeview">
+              <li class="nav-item">
+                <a href="{{route('designation.index')}} " class="nav-link @if(Request::segment(1) == 'designation' && Request::segment(2)=='index' ) active @endif bold">
+                  <i class="far fa-circle nav-icon"></i>
+                  <p>Designation List</p>
+                </a>
+              </li>  
+              <li class="nav-item">
+                <a href=" {{route('designation.create')}} " class="nav-link @if(Request::segment(1) == 'designation' && Request::segment(2)=='create' ) active @endif bold">
+                  <i class="far fa-circle nav-icon"></i>
+                  <p>Add Designation</p>
+                </a>
+              </li>
+            </ul>
+          </li>
+          <li class="nav-item has-treeview @if(Request::segment(1) == 'desigantion' && Request::segment(2)=='index' ||Request::segment(1) == 'designation' && Request::segment(2)=='create' ||Request::segment(1) == 'designation' && Request::segment(2)=='edit' ) menu-open @endif bold ">
+            <a href="#" class="nav-link ">
+              <i class="nav-icon fas fa-tasks"></i>
+              <p>
+                Meal Rate
+                <i class="right fas fa-angle-left"></i>
+              </p>
+            </a>
+            <ul class="nav nav-treeview">
+              <li class="nav-item">
+                <a href="{{route('mealrate.index')}} " class="nav-link @if(Request::segment(1) == 'mealrate' && Request::segment(2)=='index' ) active @endif bold">
+                  <i class="far fa-circle nav-icon"></i>
+                  <p>Meal Rate List</p>
+                </a>
+              </li>  
+              <li class="nav-item">
+                <a href=" {{route('mealrate.create')}} " class="nav-link @if(Request::segment(1) == 'mealrate' && Request::segment(2)=='create' ) active @endif bold">
+                  <i class="far fa-circle nav-icon"></i>
+                  <p>Add Meal Rate</p>
+                </a>
+              </li>
+            </ul>
+          </li>
 
         </ul>
       </nav>
