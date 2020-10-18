@@ -41,7 +41,7 @@
                   <thead>
                   <tr>
                     <th>Serial</th>
-                    <th>Company Name</th>
+                    <th>Unit Name</th>
                     <th>Created By</th>
                     <th>Modified By</th>
                     <th>Action</th>
@@ -50,17 +50,17 @@
                   </thead>
                   <tbody>
 
-                    @foreach ($sub_informations as $sub_information)
+                    @foreach ($units as $unit)
                     <tr>
 
                       <td>{{$serial++}}</td>
-                      <td>{{$sub_information->company_name}}</td>
-                      <td>{{$sub_information->created_by}}</td>
-                      <td>{{$sub_information->modified_by}}</td>
+                      <td>{{$unit->unit_name}}</td>
+                      <td>{{$unit->created_by}}</td>
+                      <td>{{$unit->modified_by}}</td>
 
 
                       <td>
-                        <a  href="{{route('sbu.edit',$sub_information->id)}}" class="btn btn-warning btn-xs">Edit</a>
+                        <a  href="{{route('unit.edit',$unit->id)}}" class="btn btn-warning btn-xs">Edit</a>
                         {{--  <a data-target="#" class="btn btn-xs btn-default" href="#">Details</a>  --}}
 
                     </td>

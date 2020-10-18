@@ -179,6 +179,29 @@
               </li>
             </ul>
           </li>
+          <li class="nav-item has-treeview @if(Request::segment(1) == 'desigantion' && Request::segment(2)=='index' ||Request::segment(1) == 'designation' && Request::segment(2)=='create' ||Request::segment(1) == 'designation' && Request::segment(2)=='edit' ) menu-open @endif bold ">
+            <a href="#" class="nav-link ">
+              <i class="nav-icon fas fa-tasks"></i>
+              <p>
+                Unit
+                <i class="right fas fa-angle-left"></i>
+              </p>
+            </a>
+            <ul class="nav nav-treeview">
+              <li class="nav-item">
+                <a href="{{route('unit.index')}} " class="nav-link @if(Request::segment(1) == 'mealrate' && Request::segment(2)=='index' ) active @endif bold">
+                  <i class="far fa-circle nav-icon"></i>
+                  <p>Unit List</p>
+                </a>
+              </li>  
+              <li class="nav-item">
+                <a href=" {{route('unit.create')}} " class="nav-link @if(Request::segment(1) == 'mealrate' && Request::segment(2)=='create' ) active @endif bold">
+                  <i class="far fa-circle nav-icon"></i>
+                  <p>Add Unit</p>
+                </a>
+              </li>
+            </ul>
+          </li>
 
         </ul>
       </nav>

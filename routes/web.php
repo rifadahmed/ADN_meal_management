@@ -3,6 +3,7 @@
 use App\Models\User;
 use Illuminate\Support\Facades\Route;
 use App\Http\Controllers\SbuController;
+use App\Http\Controllers\UnitController;
 use App\Http\Controllers\UserController;
 use App\Http\Controllers\ProjectController;
 use App\Http\Controllers\MealrateController;
@@ -56,7 +57,16 @@ Route::group(['middleware' => 'isAdmin'], function () {
     Route::post('/officelocation/store', [OfficeLocationController::class, 'store'])->name('officelocation.store');
     Route::get('/officelocation/edit/{id}', [OfficeLocationController::class, 'edit'])->name('officelocation.edit');
     Route::post('/officelocation/update/{id}', [OfficeLocationController::class, 'update'])->name('officelocation.update');
-   });
+
+    //Unit
+    Route::get('/unit/index', [UnitController::class, 'index'])->name('unit.index');
+    Route::get('/unit/create', [UnitController::class, 'create'])->name('unit.create');
+    Route::post('/unit/store', [UnitController::class, 'store'])->name('unit.store');
+    Route::get('/unit/edit/{id}', [UnitController::class, 'edit'])->name('unit.edit');
+    Route::post('/unit/update/{id}', [UnitController::class, 'update'])->name('unit.update');
+   
+
+});
 
 
 

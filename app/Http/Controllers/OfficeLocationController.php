@@ -31,7 +31,8 @@ class OfficeLocationController extends Controller
     {
 
         $request->validate([
-            'address'=>'required',
+            'sbu_id'=>'required|unique:office_location_informations',
+            'address'=>'required|unique:office_location_informations',
         ]);
         
             $office_location= new Office_location_information();
@@ -55,6 +56,10 @@ class OfficeLocationController extends Controller
      
     public function update(Request $request,$id)
     {
+        $request->validate([
+            'address'=>'required|unique:office_location_informations,address,'.$id,
+
+        ]);
         $office_location=  Office_location_information::find($id);
         $office_location->address = $request->address;
         $office_location->sbu_id = $request->sbu_id;

@@ -1,7 +1,7 @@
 <div class="card-body">
     <div class="row">
       <div class="form-group col-md-6">
-         <label for="">Company Name</label>
+         <label for="">Company Name @if ($errors->has('sbu_id')) <small class="red-text"> [ {{ $errors->first('sbu_id') }} ] </small>@endif</label>
          <select class="form-control" name="sbu_id" id="sbu_id" >
             <option value="" disabled selected> - Select Shareholder - </option>
             @foreach ($sbu_infos as $sbu_info)
