@@ -10,6 +10,7 @@ use App\Http\Controllers\DashboardController;
 use App\Http\Controllers\FinancialController;
 use App\Http\Controllers\DesignationController;
 use App\Http\Controllers\DisburshmentController;
+use App\Http\Controllers\OfficeLocationController;
 // use App\Http\Middleware\Auth;
 /*
 |--------------------------------------------------------------------------
@@ -48,6 +49,13 @@ Route::group(['middleware' => 'isAdmin'], function () {
     Route::post('/sbu/store', [SbuController::class, 'store'])->name('sbu.store');
     Route::get('/sbu/edit/{id}', [SbuController::class, 'edit'])->name('sbu.edit');
     Route::post('/sbu/update/{id}', [SbuController::class, 'update'])->name('sbu.update');
+
+    //Office location
+    Route::get('/officelocation/index', [OfficeLocationController::class, 'index'])->name('officelocation.index');
+    Route::get('/officelocation/create', [OfficeLocationController::class, 'create'])->name('officelocation.create');
+    Route::post('/officelocation/store', [OfficeLocationController::class, 'store'])->name('officelocation.store');
+    Route::get('/officelocation/edit/{id}', [OfficeLocationController::class, 'edit'])->name('officelocation.edit');
+    Route::post('/officelocation/update/{id}', [OfficeLocationController::class, 'update'])->name('officelocation.update');
    });
 
 

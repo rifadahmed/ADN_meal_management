@@ -41,6 +41,7 @@
                   <thead>
                   <tr>
                     <th>Serial</th>
+                    <th>Location Name</th>
                     <th>Company Name</th>
                     <th>Created By</th>
                     <th>Modified By</th>
@@ -50,17 +51,18 @@
                   </thead>
                   <tbody>
 
-                    @foreach ($sub_informations as $sub_information)
+                    @foreach ($locations as $location)
                     <tr>
 
                       <td>{{$serial++}}</td>
-                      <td>{{$sub_information->company_name}}</td>
-                      <td>{{$sub_information->created_by}}</td>
-                      <td>{{$sub_information->modified_by}}</td>
+                      <td>{{$location->address}}</td>
+                      <td>{{$location->getCompanyName->company_name}}</td>
+                      <td>{{$location->created_by}}</td>
+                      <td>{{$location->modified_by}}</td>
 
 
                       <td>
-                        <a  href="{{route('sbu.edit',$sbu->id)}}" class="btn btn-warning btn-xs">Edit</a>
+                        <a  href="{{route('officelocation.edit',$location->id)}}" class="btn btn-warning btn-xs">Edit</a>
                         {{--  <a data-target="#" class="btn btn-xs btn-default" href="#">Details</a>  --}}
 
                     </td>
